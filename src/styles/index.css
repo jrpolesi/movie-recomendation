@@ -1,0 +1,22 @@
+:root {
+  --text-color: #333;
+  --text-color-contrast: #fff;
+
+  --color-primary: #007bff;
+
+  --header-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.162);
+}
+
+[data-theme="dark"]:root {
+  --text-color: #fff;
+  --text-color-contrast: #333;
+
+  --color-primary: #0cf;
+
+  --header-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.162);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
