@@ -3,26 +3,37 @@
   --text-color-gray: #3f3f3f;
   --text-color-contrast: #fff;
 
+  --background-color: #f5f5f5;
+
   --color-primary: #3a6998;
 
   --color-warning: #dc3f42;
 
+  --color-primary-hover: #2e5f8b;
+
   --header-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.24);
+  --box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.24);
 }
 
-[data-theme="dark"]:root {
+[data-theme="dark"] {
   --text-color: #fff;
   --text-color-gray: #cfcfcf;
   --text-color-contrast: #333;
+
+  --background-color: #333;
 
   --color-primary: #0cf;
 
   --color-warning: #f00;
 
+  --color-primary-hover: #0ad;
+
   --header-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.162);
+  --box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.24);
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--text-color);
+  background-color: var(--background-color);
 }

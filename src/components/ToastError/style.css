@@ -12,7 +12,7 @@
   right: 10px;
   top: 10px;
   border-radius: 5px;
-  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--box-shadow);
   max-width: 95vw;
   max-height: 95vh;
   padding: 10px 15px;

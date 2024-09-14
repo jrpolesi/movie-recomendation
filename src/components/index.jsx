@@ -1,4 +1,4 @@
 export * from "./Header";
-export * from "./MovieBot";
+export * from "./MovieBotButton";
 export * from "./PopularPage";
 export * from "./ToastError";

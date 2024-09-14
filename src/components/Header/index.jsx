@@ -1,3 +1,4 @@
+import { DarkModeBtn } from "../DarkModeBtn";
 import "./style.css";
 
 export function Header() {
@@ -5,6 +6,8 @@ export function Header() {
     <header>
       <div className="header-container">
         <h1>MyMovies</h1>
+
+        <DarkModeBtn />
       </div>
     </header>
   );

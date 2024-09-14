@@ -1,0 +1,19 @@
+.movie-bot--header {
+  position: relative;
+  background-color: var(--color-primary);
+  color: var(--text-color-contrast);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.movie-bot--back-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color-contrast);
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  font-size: 1.8rem;
+}

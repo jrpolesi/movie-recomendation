@@ -12,6 +12,7 @@ header {
   width: 95%;
   margin: auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }

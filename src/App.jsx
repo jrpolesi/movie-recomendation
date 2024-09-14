@@ -1,4 +1,4 @@
-import { Header, PopularPage } from "./components";
+import { Header, MovieBotButton, PopularPage } from "./components";
 import { TheMovieDBProvider, ToastErrorProvider } from "./contexts";
 import "./styles/App.css";
 
@@ -11,6 +11,8 @@ function App() {
         <main className="container">
           <PopularPage />
         </main>
+
+        <MovieBotButton />
       </TheMovieDBProvider>
     </ToastErrorProvider>
   );
