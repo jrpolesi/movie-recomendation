@@ -20,5 +20,6 @@ export class TheMovieDB {
 
   genres = {
     getMovieGenres: (...args) => genres.getMovieGenres.call(this, ...args),
+    getSerieGenres: (...args) => genres.getSerieGenres.call(this, ...args),
   };
 }

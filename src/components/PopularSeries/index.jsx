@@ -1,22 +1,22 @@
 import "./style.css";
 
-import { useDiscoverMoviesInfinity } from "../../hooks";
+import { useDiscoverSeriesInfinity } from "../../hooks";
 import { LoadingSpinner } from "../LoadingSpinner";
 import { TitlesList } from "../TitlesList";
 import { SystemButton } from "../SystemButton";
 
-export function PopularMovies() {
+export function PopularSeries() {
   const {
     data,
     isLoading,
     pagination: { fetchNextPage },
-  } = useDiscoverMoviesInfinity({
+  } = useDiscoverSeriesInfinity({
     sort_by: "popularity.desc",
   });
 
   return (
     <section className="popular-movies">
-      <h2 className="popular-movies--title">Filmes populares</h2>
+      <h2 className="popular-movies--title">Séries populares</h2>
 
       <div className="popular-movies--list-container">
         {data?.length && <TitlesList titles={data} />}

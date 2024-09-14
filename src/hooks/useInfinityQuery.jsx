@@ -21,9 +21,21 @@ export function useInfinityQuery(queryFn, options, onError) {
           totalPages: total_pages,
           totalResults: total_results,
         });
-        setData((prevData) =>
-          page === 1 ? results : [...prevData, ...results]
-        );
+
+        setData((prevData) => {
+          if (page === 1) {
+            return results;
+          }
+
+          const findIDs = {};
+          return [...prevData, ...results].filter(({ id }) => {
+            if (findIDs[id]) {
+              return false;
+            }
+            findIDs[id] = true;
+            return true;
+          });
+        });
 
         setState({ isLoading: false, error: null });
       })

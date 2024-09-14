@@ -1,4 +1,4 @@
-export async function getSeriesGenres(options = {}) {
+export async function getSerieGenres(options = {}) {
   const { baseURL, defaultLanguage, defaultHeaders } = this;
 
   const urlParams = new URLSearchParams({

@@ -1,9 +1,10 @@
-export const getSeries = async (options = {}) => {
+export async function getSeries(options = {}) {
   const { baseURL, defaultLanguage, defaultHeaders } = this;
 
   const urlParams = new URLSearchParams({
     language: defaultLanguage,
     ...options,
+    page: options.page || 1,
   });
 
   const url = `${baseURL}/discover/tv?${urlParams}`;
@@ -20,4 +21,4 @@ export const getSeries = async (options = {}) => {
   }
 
   return Promise.resolve({ body, response });
-};
+}
