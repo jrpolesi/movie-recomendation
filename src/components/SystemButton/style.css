@@ -1,0 +1,8 @@
+.system-button {
+  background-color: var(--color-primary);
+  color: var(--text-color-contrast);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+}

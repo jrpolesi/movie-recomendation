@@ -1,0 +1,15 @@
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  font-size: inherit;
+  color: inherit;
+  animation: spinning 1s linear infinite;
+}
