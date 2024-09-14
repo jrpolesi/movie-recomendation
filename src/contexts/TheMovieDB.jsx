@@ -1,5 +1,5 @@
 import { createContext, useContext, useMemo } from "react";
-import { TheMovieDB } from "../api/theMovieDB";
+import { TheMovieDB } from "../api";
 
 const TheMovieDBContext = createContext();
 

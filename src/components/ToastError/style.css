@@ -1,0 +1,19 @@
+/* warning icon */
+.toast-error::before {
+  content: '⚠️';
+}
+
+.toast-error {
+  display: flex;
+  gap: 10px;
+  background-color: var(--color-warning);
+  color: var(--text-color-contrast);
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border-radius: 5px;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.24);
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 10px 15px;
+}

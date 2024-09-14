@@ -1,18 +1,20 @@
+import { Header } from "./components";
+import { PopularMovies } from "./components/PopularMovies";
+import { TheMovieDBProvider, ToastErrorProvider } from "./contexts";
 import "./styles/App.css";
-import { MovieBot, Header } from "./components";
-import { TheMovieDBProvider } from "./contexts/TheMovieDB";
-import { PopularTitles } from "./components/PopularTitles/PopularTitles";
 
 function App() {
   return (
-    <TheMovieDBProvider>
-      <Header />
+    <ToastErrorProvider>
+      <TheMovieDBProvider>
+        <Header />
 
-      <main className="container">
-        <PopularTitles />
-        <MovieBot />
-      </main>
-    </TheMovieDBProvider>
+        <main className="container">
+          <PopularMovies />
+          {/* <MovieBot /> */}
+        </main>
+      </TheMovieDBProvider>
+    </ToastErrorProvider>
   );
 }
 
