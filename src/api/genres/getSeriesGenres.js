@@ -1,13 +1,12 @@
-export async function getMovies(options = {}) {
+export async function getSeriesGenres(options = {}) {
   const { baseURL, defaultLanguage, defaultHeaders } = this;
 
   const urlParams = new URLSearchParams({
     language: defaultLanguage,
     ...options,
-    page: options.page || 1,
   });
 
-  const url = `${baseURL}/discover/movie?${urlParams}`;
+  const url = `${baseURL}/genre/tv/list?${urlParams}`;
 
   const response = await fetch(url, {
     method: "GET",
