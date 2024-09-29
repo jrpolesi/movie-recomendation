@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.module.css";
 
 import { getImageURL } from "../../api";
 
@@ -19,16 +19,18 @@ import { getImageURL } from "../../api";
  */
 export function TitleCard({ title }) {
   return (
-    <article className="title-card">
+    <article className={styles.titleCard}>
       <img src={getImageURL(title.posterPath, 400)} alt="" />
 
-      <div className="title-card--info">
-        <p className="title-card--genres" >{title.genres.join(" - ")}</p>
+      <div className={styles.titleCardInfo}>
+        <p className={styles.titleCardGenres}>{title.genres.join(" - ")}</p>
 
-        <div className="title-card--details">
-          <h3 className="title-card--title">{title.title}</h3>
+        <div className={styles.titleCardDetails}>
+          <h3 className={styles.titleCardTitle}>{title.title}</h3>
 
-          <span className="title-card--release-date">{title.releaseDate}</span>
+          <span className={styles.titleCardReleaseDate}>
+            {title.releaseDate}
+          </span>
         </div>
       </div>
     </article>

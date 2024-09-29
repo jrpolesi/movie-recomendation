@@ -1,9 +1,8 @@
-/* warning icon */
-.toast-error::before {
+.toastError::before {
   content: '⚠️';
 }
 
-.toast-error {
+.toastError {
   display: flex;
   gap: 10px;
   background-color: var(--color-warning);

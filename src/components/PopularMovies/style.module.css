@@ -1,16 +1,16 @@
-.popular-movies--title {
+.popularMoviesTitle {
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
 }
 
-.popular-movies--list-container {
+.popularMoviesListContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 
-.popular-movies--show-more-btn {
+.popularMoviesShowMoreBtn {
   display: block;
   margin: 2rem auto 1.5rem;
 }

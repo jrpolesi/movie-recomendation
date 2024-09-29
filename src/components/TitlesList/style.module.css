@@ -1,4 +1,4 @@
-.titles-list {
+.titlesList {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -7,19 +7,19 @@
 }
 
 @media screen and (min-width: 425px) {
-  .titles-list {
+  .titlesList {
     grid-template-columns: repeat(2, minmax(0, 250px));
   }
 }
 
 @media screen and (min-width: 768px) {
-  .titles-list {
+  .titlesList {
     grid-template-columns: repeat(3, minmax(0, 250px));
   } 
 }
 
 @media screen and (min-width: 1024px) {
-  .titles-list {
+  .titlesList {
     grid-template-columns: repeat(4, minmax(0, 250px));
   }
 }

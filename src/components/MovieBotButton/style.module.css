@@ -1,4 +1,4 @@
-.movie-bot-btn {
+.movieBotBtn {
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -17,11 +17,11 @@
   box-shadow: var(--box-shadow);
 }
 
-.movie-bot-btn:hover {
+.movieBotBtn:hover {
   background-color: var(--color-primary-hover);
   transition: background-color 0.3s;
 }
 
-.movie-bot-btn--icon {
+.movieBotBtnIcon {
   font-size: 2rem;
 }

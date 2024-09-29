@@ -2,11 +2,11 @@ import { MovieBotHeader } from "./MovieBotHeader";
 import { MovieBotMessageForm } from "./MovieBotMessageForm";
 import { MovieBotMessages } from "./MovieBotMessages";
 import { MovieBotResponseOptions } from "./MovieBotResponseOptions";
-import "./style.css";
+import styles from "./style.module.css";
 
 export function MovieBot() {
   return (
-    <section className="movie-bot">
+    <section className={styles.movieBot}>
       <MovieBotHeader />
 
       <MovieBotMessages />

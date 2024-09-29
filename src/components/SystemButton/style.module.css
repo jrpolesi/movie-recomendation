@@ -1,4 +1,4 @@
-.system-button {
+.systemButton {
   background-color: var(--color-primary);
   color: var(--text-color-contrast);
   border: none;
@@ -8,6 +8,6 @@
   cursor: pointer;
 }
 
-.system-button:hover {
+.systemButton:hover {
   background-color: var(--color-primary-hover);
 }

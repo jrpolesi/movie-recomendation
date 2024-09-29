@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.module.css";
 
 export function LoadingSpinner({ size = "inherit", color = "inherit" }) {
   return (
@@ -8,7 +8,9 @@ export function LoadingSpinner({ size = "inherit", color = "inherit" }) {
         color,
       }}
     >
-      <span className="material-symbols-outlined loading-spinner">
+      <span
+        className={`${styles.loadingSpinner} material-symbols-outlined loading-spinner`}
+      >
         progress_activity
       </span>
     </div>

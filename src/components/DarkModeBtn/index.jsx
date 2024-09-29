@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.module.css";
 import { useState } from "react";
 
 export function DarkModeBtn() {
@@ -8,7 +8,7 @@ export function DarkModeBtn() {
 
   return (
     <button
-      className="dark-mode-btn material-symbols-outlined"
+      className={`${styles.darkModeBtn} material-symbols-outlined`}
       onClick={() => {
         setIsDarkMode((isDarkMode) => {
           if (isDarkMode) {

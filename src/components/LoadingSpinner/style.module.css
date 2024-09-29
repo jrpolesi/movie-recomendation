@@ -8,7 +8,7 @@
   }
 }
 
-.loading-spinner {
+.loadingSpinner {
   font-size: inherit;
   color: inherit;
   animation: spinning 1s linear infinite;

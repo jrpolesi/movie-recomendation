@@ -1,10 +1,10 @@
 import { DarkModeBtn } from "../DarkModeBtn";
-import "./style.css";
+import styles from "./style.module.css";
 
 export function Header() {
   return (
-    <header>
-      <div className="header-container">
+    <header className={styles.header}>
+      <div className={styles.headerContainer}>
         <h1>MyMovies</h1>
 
         <DarkModeBtn />

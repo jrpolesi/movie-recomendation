@@ -1,38 +1,38 @@
-.title-card {
+.titleCard {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   max-width: 250px;
 }
 
-.title-card img {
+.titleCard img {
   width: 100%;
   height: 373px;
   object-fit: cover;
 }
 
-.title-card--info {
+.titleCardInfo {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
 
-.title-card--genres {
+.titleCardGenres {
   font-size: 0.875rem;
 }
 
-.title-card--details {
+.titleCardDetails {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.title-card--title {
+.titleCardTitle {
   font-size: 1rem;
   font-weight: 500;
 }
 
-.title-card--release-date {
+.titleCardReleaseDate {
   font-size: 0.875rem;
   color: var(--text-color-gray)
 }

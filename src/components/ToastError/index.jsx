@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.module.css";
 import { useEffect } from "react";
 
 export function ToastError({ error, resetError }) {
@@ -19,7 +19,7 @@ export function ToastError({ error, resetError }) {
   }
 
   return (
-    <div className="toast-error">
+    <div className={styles.toastError}>
       <p>{error.message ?? "Erro desconhecido"}</p>
     </div>
   );

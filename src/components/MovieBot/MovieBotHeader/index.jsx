@@ -1,10 +1,10 @@
-import "./style.css";
+import styles from "./style.module.css";
 
 export function MovieBotHeader({ onClose }) {
   return (
-    <div className="movie-bot--header">
+    <div className={styles.movieBotHeader}>
       <button
-        className="material-symbols-outlined movie-bot--back-btn"
+        className={`${styles.movieBotBackBtn} material-symbols-outlined`}
         onClick={onClose}
       >
         chevron_backward

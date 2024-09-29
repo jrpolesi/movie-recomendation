@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./style.css";
+import styles from "./style.module.css";
 import { MovieBot } from "../MovieBot";
 
 export function MovieBotButton() {
@@ -9,10 +9,10 @@ export function MovieBotButton() {
     <>
       {!isMovieBotOpen && (
         <button
-          className="movie-bot-btn"
+          className={styles.movieBotBtn}
           onClick={() => setIsMovieBotOpen(true)}
         >
-          <span className="movie-bot-btn--icon material-symbols-outlined">
+          <span className={`${styles.movieBotBtnIcon} material-symbols-outlined`}>
             smart_toy
           </span>
           <span>MovieBot</span>

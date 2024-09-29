@@ -1,4 +1,4 @@
-.movie-bot--header {
+.movieBotHeader {
   position: relative;
   background-color: var(--color-primary);
   color: var(--text-color-contrast);
@@ -8,7 +8,7 @@
   min-height: 50px;
 }
 
-.movie-bot--back-btn {
+.movieBotBackBtn {
   background-color: transparent;
   border: none;
   color: var(--text-color-contrast);

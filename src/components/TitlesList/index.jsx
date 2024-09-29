@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.module.css";
 
 import { TitleCard } from "../TitleCard";
 
@@ -19,7 +19,7 @@ import { TitleCard } from "../TitleCard";
  */
 export function TitlesList({ titles }) {
   return (
-    <ul className="titles-list">
+    <ul className={styles.titlesList}>
       {titles?.map((title) => (
         <li key={title.id}>
           <TitleCard title={title} />
