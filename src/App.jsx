@@ -1,18 +1,12 @@
-import { Header, MovieBotButton, PopularPage } from "./components";
 import { TheMovieDBProvider, ToastErrorProvider } from "./contexts";
+import { AppRoutes } from "./routes";
 import "./styles/App.css";
 
 function App() {
   return (
     <ToastErrorProvider>
       <TheMovieDBProvider>
-        <Header />
-
-        <main className="container">
-          <PopularPage />
-        </main>
-
-        <MovieBotButton />
+        <AppRoutes />
       </TheMovieDBProvider>
     </ToastErrorProvider>
   );

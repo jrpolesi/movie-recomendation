@@ -22,7 +22,7 @@ export function TitlesList({ titles }) {
     <ul className={styles.titlesList}>
       {titles?.map((title) => (
         <li key={title.id}>
-          <TitleCard title={title} />
+          <TitleCard {...title} />
         </li>
       ))}
     </ul>
