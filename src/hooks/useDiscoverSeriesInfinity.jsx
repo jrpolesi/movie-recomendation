@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useTheMovieDBContext } from "../contexts/TheMovieDB";
-import { useInfinityQuery } from "./useInfinityQuery";
-import { useQuery } from "./useQuery";
+import { useQuery } from "./shared/useQuery";
+import { useInfinityQuery } from "./shared/useInfinityQuery";
 
 /**
  *
@@ -39,8 +39,6 @@ import { useQuery } from "./useQuery";
 export function useDiscoverSeriesInfinity(options) {
   const api = useTheMovieDBContext();
 
-
-
   const {
     data: genresData,
     isLoading: isGenresLoading,
@@ -56,7 +54,7 @@ export function useDiscoverSeriesInfinity(options) {
 
     return data?.map((serie) => ({
       id: serie.id,
-      title: serie.title,
+      title: serie.name,
       overview: serie.overview,
       voteAverage: serie.vote_average,
       posterPath: serie.poster_path,

@@ -1,5 +1,7 @@
 import { discover } from "./discover";
 import { genres } from "./genres";
+import { movies } from "./movies";
+import { series } from "./series";
 
 export class TheMovieDB {
   baseURL = "https://api.themoviedb.org/3";
@@ -21,5 +23,13 @@ export class TheMovieDB {
   genres = {
     getMovieGenres: (...args) => genres.getMovieGenres.call(this, ...args),
     getSerieGenres: (...args) => genres.getSerieGenres.call(this, ...args),
+  };
+
+  movies = {
+    getMovieDetails: (...args) => movies.getMovieDetails.call(this, ...args),
+  };
+
+  series = {
+    getSerieDetails: (...args) => series.getSerieDetails.call(this, ...args),
   };
 }

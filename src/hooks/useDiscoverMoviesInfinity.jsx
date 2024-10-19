@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useTheMovieDBContext } from "../contexts/TheMovieDB";
-import { useInfinityQuery } from "./useInfinityQuery";
-import { useQuery } from "./useQuery";
+import { useInfinityQuery } from "./shared/useInfinityQuery";
+import { useQuery } from "./shared/useQuery";
 
 /**
  *

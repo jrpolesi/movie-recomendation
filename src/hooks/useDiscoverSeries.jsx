@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useTheMovieDBContext } from "../contexts/TheMovieDB";
-import { usePaginatedQuery } from "./usePaginatedQuery";
-import { useQuery } from "./useQuery";
+import { usePaginatedQuery } from "./shared/usePaginatedQuery";
+import { useQuery } from "./shared/useQuery";
 
 /**
  *
@@ -55,7 +55,7 @@ export function useDiscoverSeries(options) {
 
     return data?.map((serie) => ({
       id: serie.id,
-      title: serie.title,
+      title: serie.name,
       overview: serie.overview,
       voteAverage: serie.vote_average,
       posterPath: serie.poster_path,
