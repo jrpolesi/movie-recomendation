@@ -20,3 +20,19 @@
   align-items: center;
   height: 100%;
 }
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.navList li a {
+  color: var(--text-color-contrast);
+  text-decoration: none;
+}
+
+.navList li a.activeLink {
+  text-decoration: underline;
+}
