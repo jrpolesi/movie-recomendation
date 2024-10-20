@@ -32,7 +32,7 @@ export function useSerieDetails(options) {
   return {
     data: {
       title: data?.name,
-      originalTitle: data?.original_title,
+      originalTitle: data?.original_name,
       originalLanguage: data?.original_language,
       overview: data?.overview,
       genres: data?.genres.map((genre) => genre.name),

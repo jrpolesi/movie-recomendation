@@ -3,6 +3,7 @@ import { useSerieDetails } from "../../hooks";
 import { LoadingSpinner } from "../LoadingSpinner";
 import { PageTemplate } from "../PageTemplate";
 import { TitleDetails } from "../TitleDetails";
+import styles from "./style.module.css";
 
 export function SeriePage() {
   const { id } = useParams();
@@ -12,7 +13,9 @@ export function SeriePage() {
   return (
     <PageTemplate>
       {isLoading ? (
-        <LoadingSpinner size="50px" />
+        <div className={styles.loading}>
+          <LoadingSpinner size="50px" />
+        </div>
       ) : (
         data && <TitleDetails {...data} />
       )}

@@ -9,7 +9,7 @@ export function useTheMovieDBContext() {
 
 export function TheMovieDBProvider({ children }) {
   const api = useMemo(() => {
-    let apiKey = import.meta.env.VITE_API_KEY2;
+    let apiKey = import.meta.env.VITE_API_KEY;
 
     if (!apiKey) {
       apiKey = prompt("Informe a chave da API do The Movie DB");

@@ -1,8 +1,101 @@
 .cardContainer {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-.cardContainer h2 {
+.upperTitle {
   font-size: 20px;
+}
+
+.poster {
+  width: 100%;
+  max-width: 400px;
+  align-self: center;
+}
+
+.titleHeader {
+  & .originalInfo {
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  & h2 {
+    display: none;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.genres {
+  color: var(--text-color-gray);
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.moreDetails {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.vote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--text-color-contrast);
+}
+
+.releaseDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .upperTitle {
+    display: none;
+  }
+
+  .poster {
+    width: 40%;
+    max-width: 400px;
+  }
+
+  .titleHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & h2 {
+      display: block;
+      font-size: 24px;
+    }
+
+    & .originalInfo {
+      font-size: 18px;
+    }
+  }
+
+  .genres {
+    margin-top: 10px;
+  }
 }

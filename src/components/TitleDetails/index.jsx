@@ -1,4 +1,5 @@
 import { getImageURL } from "../../api";
+import { SystemButton } from "../SystemButton";
 import styles from "./style.module.css";
 
 export function TitleDetails({
@@ -13,33 +14,39 @@ export function TitleDetails({
 }) {
   return (
     <div className={styles.cardContainer}>
-      <h2>{title}</h2>
+      <h2 className={styles.upperTitle}>{title}</h2>
 
-      <img src={getImageURL(posterPath, 400)} alt="" />
+      <img
+        className={styles.poster}
+        src={getImageURL(posterPath, 400)}
+        alt={title}
+      />
 
-      <div>
-        <div>
+      <div className={styles.info}>
+        <div className={styles.titleHeader}>
           <h2>{title}</h2>
 
-          <p>
+          <p className={styles.originalInfo}>
             <span>{originalTitle}</span> -{" "}
             <span>{originalLanguage?.toUpperCase()}</span>
           </p>
         </div>
 
-        <p>{genres?.join(" - ")}</p>
+        <p className={styles.genres}>{genres?.join(" - ")}</p>
 
-        <p>{overview}</p>
+        <p className={styles.description}>{overview}</p>
 
-        <div>
-          <span>{voteAverage}</span>
-          <p>
-            <span>Data de lançamento</span>
+        <div className={styles.moreDetails}>
+          <span className={styles.vote}>{voteAverage?.toFixed(1)}</span>
+          <p className={styles.releaseDate}>
+            <span>Lançamento</span>
             <span>{releaseDate}</span>
           </p>
         </div>
 
-        <button>Ver mais tarde</button>
+        <SystemButton onClick={() => alert("Ainda não implementado")}>
+          Ver mais tarde
+        </SystemButton>
       </div>
     </div>
   );
