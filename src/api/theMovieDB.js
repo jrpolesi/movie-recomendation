@@ -3,7 +3,6 @@ import { genres } from "./genres";
 import { movies } from "./movies";
 import { search } from "./search";
 import { series } from "./series";
-import { session } from "./session";
 import { watchList } from "./watchlist";
 
 export class TheMovieDB {
