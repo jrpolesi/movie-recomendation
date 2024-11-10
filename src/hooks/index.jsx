@@ -4,3 +4,4 @@ export * from "./useDiscoverSeries";
 export * from "./useDiscoverSeriesInfinity";
 export * from "./useMovieDetails";
 export * from "./useSerieDetails";
+export * from "./useFindMovies";
