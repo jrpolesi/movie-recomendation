@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
+import { PageTemplate } from "../../components/PageTemplate";
+import { TitleDetails } from "../../components/TitleDetails";
 import { useSerieDetails } from "../../hooks";
-import { LoadingSpinner } from "../LoadingSpinner";
-import { PageTemplate } from "../PageTemplate";
-import { TitleDetails } from "../TitleDetails";
 import styles from "./style.module.css";
 
 export function SeriePage() {

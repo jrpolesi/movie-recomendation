@@ -1,5 +1,5 @@
+import { PopularSeries } from "../../components";
 import { PageTemplate } from "../PageTemplate";
-import { PopularSeries } from "../PopularSeries";
 
 export function PopularSeriesPage() {
   return (

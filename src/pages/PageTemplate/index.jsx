@@ -1,5 +1,4 @@
-import { Header } from "../Header";
-import { MovieBotButton } from "../MovieBotButton";
+import { Header, MovieBotButton } from "../../components";
 import styles from "./style.module.css";
 
 export function PageTemplate({ children }) {

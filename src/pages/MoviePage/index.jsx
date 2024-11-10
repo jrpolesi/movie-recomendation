@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
+import { LoadingSpinner, TitleDetails } from "../../components/";
 import { useMovieDetails } from "../../hooks";
-import { LoadingSpinner } from "../../components/LoadingSpinner";
-import { PageTemplate } from "../../components/PageTemplate";
-import { TitleDetails } from "../../components/TitleDetails";
+import { PageTemplate } from "../PageTemplate";
 import styles from "./style.module.css";
 
 export function MoviePage() {
