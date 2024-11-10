@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 
-import { getImageURL } from "../../api";
 import { Link } from "react-router-dom";
+import { getImageURL } from "../../api";
 
 /**
  *
@@ -16,20 +16,31 @@ import { Link } from "react-router-dom";
  * }} props
  * @returns
  */
-export function TitleCard({ title, posterPath, releaseDate, genres, id }) {
+export function TitleCard({
+  title,
+  posterPath,
+  releaseDate,
+  genres = [],
+  id,
+  linkPrefix = "",
+}) {
   return (
     <article className={styles.titleCard}>
-      <Link to={`${id}`}>
+      <Link to={`${linkPrefix}${id}`}>
         <img src={getImageURL(posterPath, 400)} alt="" />
       </Link>
 
       <div className={styles.titleCardInfo}>
-        <p className={styles.titleCardGenres}>{genres.join(" - ")}</p>
+        {!!genres.length && (
+          <p className={styles.titleCardGenres}>{genres.join(" - ")}</p>
+        )}
 
         <div className={styles.titleCardDetails}>
           <h3 className={styles.titleCardTitle}>{title}</h3>
 
-          <span className={styles.titleCardReleaseDate}>{releaseDate}</span>
+          {releaseDate && (
+            <span className={styles.titleCardReleaseDate}>{releaseDate}</span>
+          )}
         </div>
       </div>
     </article>
