@@ -1,7 +1,9 @@
 import { discover } from "./discover";
 import { genres } from "./genres";
 import { movies } from "./movies";
+import { search } from "./search";
 import { series } from "./series";
+import { watchList } from "./watchlist";
 
 export class TheMovieDB {
   baseURL = "https://api.themoviedb.org/3";
@@ -18,6 +20,18 @@ export class TheMovieDB {
   discover = {
     getMovies: (...args) => discover.getMovies.call(this, ...args),
     getSeries: (...args) => discover.getSeries.call(this, ...args),
+  };
+
+  search = {
+    getMovies: (...args) => search.getMovies.call(this, ...args),
+    getSeries: (...args) => search.getSeries.call(this, ...args),
+  };
+
+  watchList = {
+    getMovies: (...args) => watchList.getMovies.call(this, ...args),
+    getSeries: (...args) => watchList.getSeries.call(this, ...args),
+    addMovie: (...args) => watchList.addMovie.call(this, ...args),
+    addSerie: (...args) => watchList.addSerie.call(this, ...args),
   };
 
   genres = {
