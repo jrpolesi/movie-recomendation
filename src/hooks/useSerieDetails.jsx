@@ -31,6 +31,7 @@ export function useSerieDetails(options) {
 
   return {
     data: {
+      id: data?.id,
       title: data?.name,
       originalTitle: data?.original_name,
       originalLanguage: data?.original_language,

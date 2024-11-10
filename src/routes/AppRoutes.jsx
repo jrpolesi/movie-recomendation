@@ -1,6 +1,12 @@
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
-import { MoviePage, SeriePage } from "../components";
-import { PopularMoviesPage, PopularSeriesPage } from "../pages";
+
+import {
+  MoviePage,
+  PopularMoviesPage,
+  PopularSeriesPage,
+  SeriePage,
+  WatchListPage,
+} from "../pages";
 
 export function AppRoutes() {
   return (
@@ -10,8 +16,7 @@ export function AppRoutes() {
         <Route path="/series" element={<PopularSeriesPage />} />
         <Route path="/movies/:id" element={<MoviePage />} />
         <Route path="/series/:id" element={<SeriePage />} />
-        <Route path="/watchlist/movies" element={<PopularMoviesPage />} />
-        <Route path="/watchlist/series" element={<PopularMoviesPage />} />
+        <Route path="/watchlist" element={<WatchListPage />} />
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>
     </HashRouter>

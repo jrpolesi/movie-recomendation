@@ -3,6 +3,7 @@ import { SystemButton } from "../SystemButton";
 import styles from "./style.module.css";
 
 export function TitleDetails({
+  id,
   title,
   posterPath,
   voteAverage,
@@ -11,6 +12,9 @@ export function TitleDetails({
   releaseDate,
   originalTitle,
   originalLanguage,
+  onAddToWatchList,
+  onRemoveFromWatchList,
+  isOnWatchList,
 }) {
   return (
     <div className={styles.cardContainer}>
@@ -44,9 +48,15 @@ export function TitleDetails({
           </p>
         </div>
 
-        <SystemButton onClick={() => alert("Ainda não implementado")}>
-          Ver mais tarde
-        </SystemButton>
+        {isOnWatchList ? (
+          <SystemButton onClick={() => onRemoveFromWatchList?.(id)}>
+            Remover da lista
+          </SystemButton>
+        ) : (
+          <SystemButton onClick={() => onAddToWatchList?.(id)}>
+            Ver mais tarde
+          </SystemButton>
+        )}
       </div>
     </div>
   );

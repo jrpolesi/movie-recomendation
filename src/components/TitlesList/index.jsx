@@ -17,12 +17,12 @@ import { TitleCard } from "../TitleCard";
  * }} props
  * @returns
  */
-export function TitlesList({ titles }) {
+export function TitlesList({ titles, linkPrefix }) {
   return (
     <ul className={styles.titlesList}>
       {titles?.map((title) => (
         <li key={title.id}>
-          <TitleCard {...title} />
+          <TitleCard {...title} linkPrefix={linkPrefix} />
         </li>
       ))}
     </ul>

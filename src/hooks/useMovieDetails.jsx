@@ -33,6 +33,7 @@ export function useMovieDetails(options) {
 
   return {
     data: {
+      id: data?.id,
       title: data?.title,
       originalTitle: data?.original_title,
       originalLanguage: data?.original_language,

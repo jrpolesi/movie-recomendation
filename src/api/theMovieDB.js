@@ -3,6 +3,7 @@ import { genres } from "./genres";
 import { movies } from "./movies";
 import { search } from "./search";
 import { series } from "./series";
+import { session } from "./session";
 import { watchList } from "./watchlist";
 
 export class TheMovieDB {
@@ -32,6 +33,8 @@ export class TheMovieDB {
     getSeries: (...args) => watchList.getSeries.call(this, ...args),
     addMovie: (...args) => watchList.addMovie.call(this, ...args),
     addSerie: (...args) => watchList.addSerie.call(this, ...args),
+    removeMovie: (...args) => watchList.removeMovie.call(this, ...args),
+    removeSerie: (...args) => watchList.removeSerie.call(this, ...args),
   };
 
   genres = {
@@ -45,5 +48,10 @@ export class TheMovieDB {
 
   series = {
     getSerieDetails: (...args) => series.getSerieDetails.call(this, ...args),
+  };
+
+  session = {
+    createGuestSession: (...args) =>
+      session.createGuestSession.call(this, ...args),
   };
 }

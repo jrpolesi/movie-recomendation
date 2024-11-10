@@ -2,8 +2,8 @@ import styles from "./style.module.css";
 
 import { useDiscoverMoviesInfinity } from "../../hooks";
 import { LoadingSpinner } from "../LoadingSpinner";
-import { TitlesList } from "../TitlesList";
 import { SystemButton } from "../SystemButton";
+import { TitlesList } from "../TitlesList";
 
 export function PopularMovies() {
   const {

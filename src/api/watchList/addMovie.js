@@ -1,23 +1,17 @@
+import { WATCH_LIST_KEY } from "../storageKeys";
+
 export async function addMovie(options = {}) {
-  const { baseURL, defaultLanguage, defaultHeaders } = this;
+  const stringValue = localStorage.getItem(WATCH_LIST_KEY) ?? "{}";
 
-  const urlParams = new URLSearchParams({
-    language: defaultLanguage,
-    ...options,
-  });
+  const value = JSON.parse(stringValue);
 
-  const url = `${baseURL}/genre/movie/list?${urlParams}`;
-
-  const response = await fetch(url, {
-    method: "GET",
-    headers: defaultHeaders,
-  });
-
-  const body = await response.json();
-
-  if (!response.ok) {
-    return Promise.reject({ body, response });
+  if (value.movies) {
+    value.movies.push(options.movie);
+  } else {
+    value.movies = [options.movie];
   }
 
-  return Promise.resolve({ body, response });
+  localStorage.setItem(WATCH_LIST_KEY, JSON.stringify(value));
+
+  return value.movies;
 }

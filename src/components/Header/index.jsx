@@ -11,6 +11,10 @@ const ROUTES = [
     label: "Séries",
     to: "/series",
   },
+  {
+    label: "Minha Lista",
+    to: "/watchlist",
+  },
 ];
 
 export function Header() {

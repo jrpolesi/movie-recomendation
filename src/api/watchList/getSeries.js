@@ -1,23 +1,9 @@
-export async function getSeries(options = {}) {
-  const { baseURL, defaultLanguage, defaultHeaders } = this;
+import { WATCH_LIST_KEY } from "../storageKeys";
 
-  const urlParams = new URLSearchParams({
-    language: defaultLanguage,
-    ...options,
-  });
+export function getSeries() {
+  const stringValue = localStorage.getItem(WATCH_LIST_KEY) ?? "{}";
 
-  const url = `${baseURL}/genre/tv/list?${urlParams}`;
+  const value = JSON.parse(stringValue);
 
-  const response = await fetch(url, {
-    method: "GET",
-    headers: defaultHeaders,
-  });
-
-  const body = await response.json();
-
-  if (!response.ok) {
-    return Promise.reject({ body, response });
-  }
-
-  return Promise.resolve({ body, response });
+  return value.series;
 }
