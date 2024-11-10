@@ -48,9 +48,4 @@ export class TheMovieDB {
   series = {
     getSerieDetails: (...args) => series.getSerieDetails.call(this, ...args),
   };
-
-  session = {
-    createGuestSession: (...args) =>
-      session.createGuestSession.call(this, ...args),
-  };
 }
