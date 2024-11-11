@@ -3,7 +3,7 @@ import { genres } from "./genres";
 import { movies } from "./movies";
 import { search } from "./search";
 import { series } from "./series";
-import { watchList } from "./watchlist";
+import { watchList } from "./watchList";
 
 export class TheMovieDB {
   baseURL = "https://api.themoviedb.org/3";
