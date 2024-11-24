@@ -1,14 +1,14 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
-import { useDiscoverMoviesInfinity } from "../../hooks";
-import { PopularMovies } from "./index";
+import { useDiscoverSeriesInfinity } from "../../hooks";
+import { PopularSeries } from "./index";
 
 vi.mock("../../hooks");
 
 const mockData = [
-  { id: 1, title: "Movie 1" },
-  { id: 2, title: "Movie 2" },
+  { id: 1, title: "Serie 1" },
+  { id: 2, title: "Serie 2" },
 ];
 
 const renderWithRouter = (ui, { route = "/" } = {}) => {
@@ -16,44 +16,44 @@ const renderWithRouter = (ui, { route = "/" } = {}) => {
   return render(ui, { wrapper: MemoryRouter });
 };
 
-describe("PopularMovies", () => {
+describe("PopularSeries", () => {
   it("renders loading spinner when loading", () => {
-    useDiscoverMoviesInfinity.mockReturnValue({
+    useDiscoverSeriesInfinity.mockReturnValue({
       data: [],
       isLoading: true,
       pagination: { fetchNextPage: vi.fn() },
     });
 
-    renderWithRouter(<PopularMovies />);
+    renderWithRouter(<PopularSeries />);
 
-    expect(screen.getByText("Filmes populares")).toBeInTheDocument();
+    expect(screen.getByText("Séries populares")).toBeInTheDocument();
     expect(screen.getByText("progress_activity")).toBeInTheDocument();
   });
 
-  it("renders movie titles when data is available", () => {
-    useDiscoverMoviesInfinity.mockReturnValue({
+  it("renders serie titles when data is available", () => {
+    useDiscoverSeriesInfinity.mockReturnValue({
       data: mockData,
       isLoading: false,
       pagination: { fetchNextPage: vi.fn() },
     });
 
-    renderWithRouter(<PopularMovies />);
+    renderWithRouter(<PopularSeries />);
 
-    expect(screen.getByText("Filmes populares")).toBeInTheDocument();
-    expect(screen.getByText("Movie 1")).toBeInTheDocument();
-    expect(screen.getByText("Movie 2")).toBeInTheDocument();
+    expect(screen.getByText("Séries populares")).toBeInTheDocument();
+    expect(screen.getByText("Serie 1")).toBeInTheDocument();
+    expect(screen.getByText("Serie 2")).toBeInTheDocument();
   });
 
   it('calls fetchNextPage when "Exibir mais" button is clicked', () => {
     const fetchNextPage = vi.fn();
 
-    useDiscoverMoviesInfinity.mockReturnValue({
+    useDiscoverSeriesInfinity.mockReturnValue({
       data: mockData,
       isLoading: false,
       pagination: { fetchNextPage },
     });
 
-    renderWithRouter(<PopularMovies />);
+    renderWithRouter(<PopularSeries />);
 
     const button = screen.getByText("Exibir mais");
     fireEvent.click(button);
@@ -62,13 +62,13 @@ describe("PopularMovies", () => {
   });
 
   it('disables "Exibir mais" button when loading', () => {
-    useDiscoverMoviesInfinity.mockReturnValue({
+    useDiscoverSeriesInfinity.mockReturnValue({
       data: mockData,
       isLoading: true,
       pagination: { fetchNextPage: vi.fn() },
     });
 
-    renderWithRouter(<PopularMovies />);
+    renderWithRouter(<PopularSeries />);
 
     const button = screen.getByText("Exibir mais");
     expect(button).toBeDisabled();
