@@ -7,7 +7,7 @@ import { MovieBotMessageForm } from "./MovieBotMessageForm";
 import { MovieBotMessages, YOU_OWNER } from "./MovieBotMessages";
 import styles from "./style.module.css";
 
-export function MovieBot({ handleClose }) {
+export function MovieBot({ handleClose, ...props }) {
   const [messages, setMessages] = useState([
     {
       owner: "Movie bot",
@@ -20,7 +20,7 @@ export function MovieBot({ handleClose }) {
   const { isLoading, error, fn: findMovie } = useFindMovie();
 
   return (
-    <section className={styles.movieBot}>
+    <section className={styles.movieBot} {...props}>
       <MovieBotHeader onClose={handleClose} />
 
       {isLoading || error ? (

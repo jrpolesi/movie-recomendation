@@ -1,6 +1,6 @@
 import { useState } from "react";
-import styles from "./style.module.css";
 import { MovieBot } from "../MovieBot";
+import styles from "./style.module.css";
 
 export function MovieBotButton() {
   const [isMovieBotOpen, setIsMovieBotOpen] = useState(false);
@@ -12,7 +12,9 @@ export function MovieBotButton() {
           className={styles.movieBotBtn}
           onClick={() => setIsMovieBotOpen(true)}
         >
-          <span className={`${styles.movieBotBtnIcon} material-symbols-outlined`}>
+          <span
+            className={`${styles.movieBotBtnIcon} material-symbols-outlined`}
+          >
             smart_toy
           </span>
           <span>MovieBot</span>
@@ -20,7 +22,10 @@ export function MovieBotButton() {
       )}
 
       {isMovieBotOpen && (
-        <MovieBot handleClose={() => setIsMovieBotOpen(false)} />
+        <MovieBot
+          handleClose={() => setIsMovieBotOpen(false)}
+          data-testid="movie-bot"
+        />
       )}
     </>
   );
