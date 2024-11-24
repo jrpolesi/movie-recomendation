@@ -20,7 +20,7 @@ export function ToastError({ error, resetError }) {
 
   return (
     <div className={styles.toastError}>
-      <p>{error.message ?? "Erro desconhecido"}</p>
+      <p>{error?.message ?? "Erro desconhecido"}</p>
     </div>
   );
 }
