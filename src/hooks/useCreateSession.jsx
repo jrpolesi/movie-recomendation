@@ -31,10 +31,10 @@ export function useCreateSession(requestToken) {
       }
     }
 
-    if (!requestToken || isLoading) return;
+    if (!requestToken || isLoading || error) return;
 
     crateSession();
-  }, [api.session, isLoading, requestToken, saveSession]);
+  }, [api.session, error, isLoading, requestToken, saveSession]);
 
   return { isLoading, error };
 }
