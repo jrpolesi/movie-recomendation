@@ -1,14 +1,20 @@
-import { TheMovieDBProvider, ToastErrorProvider } from "./contexts";
+import {
+  SessionProvider,
+  TheMovieDBProvider,
+  ToastErrorProvider,
+} from "./contexts";
 import { AppRoutes } from "./routes";
 import "./styles/App.css";
 
 function App() {
   return (
-    <ToastErrorProvider>
-      <TheMovieDBProvider>
-        <AppRoutes />
-      </TheMovieDBProvider>
-    </ToastErrorProvider>
+    <SessionProvider>
+      <ToastErrorProvider>
+        <TheMovieDBProvider>
+          <AppRoutes />
+        </TheMovieDBProvider>
+      </ToastErrorProvider>
+    </SessionProvider>
   );
 }
 
